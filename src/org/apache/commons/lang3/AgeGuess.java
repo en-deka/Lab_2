@@ -30,14 +30,17 @@ public static void main(String[] args) {
 	System.out.print("Hello " + name
 			+ ". I am thinking of an age between 0 and 100.  Of which age do you think that I am thinking?   ");
 	age_Guess = scan.nextInt();
-	if (age_Guess >= 0 && age_Guess <= 100)
-		System.out.println("Your guess was " + age_Guess + ". I was thinking about the age " + age + ".");
+	
+	if (age_Guess >= 0 && age_Guess <= 100 && age_Guess != age){
+			System.out.println("You guessed wrong!");
+			System.out.println("Your guess was " + age_Guess + ". I was thinking about the age " + age + ".");
+	}
 	else {
 		System.out.print("Please read directions and try again!");
-		System.exit(0);
-	}
+		System.exit(0);}
+}
 		
 	}
-}
+
 
 
